@@ -1,239 +1,577 @@
+<!DOCTYPE html>
+<!-- saved from url=(0249)file:///C:/Users/USER/Desktop/2025%20%E6%AD%90%E6%B4%B2%E8%A6%AA%E5%AD%90%E4%B9%8B%E6%97%85%EF%BD%9C%E7%B6%AD%E4%B9%9F%E7%B4%8D%20%C2%B7%20%E8%96%A9%E7%88%BE%E8%8C%B2%E5%A0%A1%20%C2%B7%20%E6%9F%8F%E6%9E%97%20%C2%B7%20%E6%85%95%E5%B0%BC%E9%BB%91.html -->
+<html lang="zh-TW"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2025 歐洲親子之旅｜維也納 · 薩爾茲堡 · 柏林 · 慕尼黑</title>
+<link href="./index_files/css2" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@400;500&display=swap');
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',sans-serif;color:var(--color-text-primary);background:transparent}
-.wrap{display:grid;grid-template-columns:268px 1fr;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);overflow:hidden;min-height:600px}
-.sidebar{background:var(--color-background-secondary);border-right:0.5px solid var(--color-border-tertiary);display:flex;flex-direction:column;overflow-y:auto}
-.sidebar-header{padding:1rem 1.25rem 0.75rem;border-bottom:0.5px solid var(--color-border-tertiary);position:sticky;top:0;background:var(--color-background-secondary);z-index:2}
-.sidebar-header h2{font-family:'Crimson Pro',serif;font-size:18px;font-weight:600;line-height:1.3}
-.sidebar-header p{font-size:11px;color:var(--color-text-secondary);margin-top:3px}
-.section-label{font-size:9px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--color-text-secondary);padding:8px 14px 4px;background:var(--color-background-secondary)}
-.day-tab{padding:0.6rem 1.25rem;cursor:pointer;border-bottom:0.5px solid var(--color-border-tertiary);display:flex;align-items:flex-start;gap:9px;transition:background 0.12s}
-.day-tab:hover{background:var(--color-background-primary)}
-.dnum{font-size:10px;color:var(--color-text-secondary);min-width:34px;padding-top:2px;line-height:1.3}
-.dtitle{font-size:12.5px;font-weight:500;line-height:1.35}
-.dsub{font-size:10.5px;color:var(--color-text-secondary);margin-top:1px}
-.main{display:flex;flex-direction:column;background:var(--color-background-primary);overflow:hidden}
-.map-box{height:270px;overflow:hidden;flex-shrink:0;background:#cde5da}
-.map-box svg{width:100%;height:100%}
-.detail{flex:1;padding:1.2rem;overflow-y:auto}
-.dlabel{font-size:10px;font-weight:500;letter-spacing:0.07em;text-transform:uppercase;margin-bottom:3px}
-.dtitle2{font-family:'Crimson Pro',serif;font-size:20px;font-weight:600;margin-bottom:2px}
-.ddate{font-size:11px;color:var(--color-text-secondary);margin-bottom:10px}
-.tip{border-radius:var(--border-radius-md);padding:7px 10px;font-size:11px;margin-bottom:11px;display:flex;gap:7px;align-items:flex-start;line-height:1.5}
-.tip-warn{background:#FAEEDA;border:0.5px solid #FAC775;color:#BA7517}
-.tip-info{background:#E6F1FB;border:0.5px solid #A8CBF0;color:#185FA5}
-.tip-green{background:#E1F5EE;border:0.5px solid #8ED5BE;color:#0F6E56}
-.stops{display:flex;flex-direction:column;gap:8px}
-.scard{background:var(--color-background-secondary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:8px 12px;border-left:3px solid transparent}
-.stime{font-size:10px;color:var(--color-text-secondary);margin-bottom:1px}
-.sname{font-size:13px;font-weight:500}
-.sdesc{font-size:11px;color:var(--color-text-secondary);margin-top:3px;line-height:1.55}
-.stag{display:inline-block;font-size:9.5px;font-weight:500;padding:2px 7px;border-radius:99px;margin-top:5px}
-.t-drive{background:#E6F1FB;color:#185FA5}
-.t-activity{background:#E1F5EE;color:#0F6E56}
-.t-food{background:#FAEEDA;color:#BA7517}
-.t-scenic{background:#FAECE7;color:#993C1D}
-.t-stay{background:#EEEDFE;color:#534AB7}
-.t-new{background:#EAF3DE;color:#3B6D11;border:0.5px solid #C0DD97}
-.pulse{animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.35}}
-.new-badge{font-size:9px;font-weight:500;padding:1px 6px;border-radius:99px;background:#EAF3DE;color:#3B6D11;border:0.5px solid #C0DD97;margin-left:6px;vertical-align:middle}
-.price-box{background:#E1F5EE;border:0.5px solid #8ED5BE;border-radius:var(--border-radius-md);padding:7px 11px;font-size:11px;color:#0F6E56;margin-top:6px;line-height:1.6}
-</style>
+  :root {
+    --vienna: #8B5E3C;
+    --salzburg: #1D6B48;
+    --berlin: #2C4A7C;
+    --munich: #9B3A20;
+    --bg: #F7F4EF;
+    --card: #FFFFFF;
+    --text: #2A2520;
+    --muted: #7A7068;
+    --border: #E5DED5;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans TC', sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.6; }
 
-<div class="wrap">
-  <div class="sidebar">
-    <div class="sidebar-header">
-      <h2>巴伐利亞親子行程</h2>
-      <p>7/1–7/11 · 2大3小 · 奧地利 + 德國</p>
-    </div>
-    <div id="tabs"></div>
-  </div>
-  <div class="main">
-    <div class="map-box">
-      <svg viewBox="0 0 440 270" xmlns="http://www.w3.org/2000/svg">
-        <rect width="440" height="270" fill="#c8e4d8"/>
-        <path d="M0,60 Q80,40 160,55 Q240,70 320,50 Q380,40 440,48 L440,0 L0,0Z" fill="#b0ccb0" opacity="0.5"/>
-        <path d="M0,270 L440,270 L440,190 Q360,175 280,183 Q200,191 120,178 Q60,168 0,175Z" fill="#a8c8a0" opacity="0.35"/>
-        <ellipse cx="105" cy="210" rx="52" ry="15" fill="#7bbfad" opacity="0.6"/>
-        <ellipse cx="210" cy="175" rx="38" ry="11" fill="#7bbfad" opacity="0.55"/>
-        <ellipse cx="295" cy="188" rx="26" ry="8" fill="#7bbfad" opacity="0.5"/>
-        <ellipse cx="47" cy="240" rx="14" ry="5" fill="#7bbfad" opacity="0.5"/>
-        <polyline id="route" fill="none" stroke="#555" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.4"/>
-        <g id="markers"></g>
-      </svg>
-    </div>
-    <div class="detail" id="detail"></div>
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 70%, #533483 100%);
+    color: white; padding: 56px 24px 48px; text-align: center; position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '✈'; font-size: 120px; position: absolute; top: -20px; right: -20px;
+    opacity: 0.06; transform: rotate(-15deg);
+  }
+  .hero-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #a0c4ff; margin-bottom: 12px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(24px,5vw,38px); line-height: 1.25; margin-bottom: 12px; font-weight: 700; }
+  .hero-sub { font-size: 13px; color: #c0d4f0; margin-bottom: 24px; }
+  .hero-stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+  .stat { text-align: center; }
+  .stat-n { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #ffd580; }
+  .stat-l { font-size: 11px; color: #a0c4ff; margin-top: 2px; letter-spacing: 0.05em; }
+
+  /* PHASE NAV */
+  .phase-nav { display: flex; overflow-x: auto; gap: 0; background: white; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
+  .phase-btn {
+    flex: 1; min-width: 80px; padding: 12px 8px; border: none; background: none; cursor: pointer;
+    font-family: 'Noto Sans TC', sans-serif; font-size: 12px; font-weight: 500;
+    color: var(--muted); border-bottom: 3px solid transparent; transition: all 0.2s; text-align: center; white-space: nowrap;
+  }
+  .phase-btn.active { color: var(--text); border-bottom-color: currentColor; }
+  .phase-btn[data-phase="vienna"].active { color: var(--vienna); }
+  .phase-btn[data-phase="salzburg"].active { color: var(--salzburg); }
+  .phase-btn[data-phase="berlin"].active { color: var(--berlin); }
+  .phase-btn[data-phase="munich"].active { color: var(--munich); }
+  .phase-icon { font-size: 16px; display: block; margin-bottom: 2px; }
+
+  /* CONTENT */
+  .phase-content { display: none; max-width: 680px; margin: 0 auto; padding: 20px 16px 48px; }
+  .phase-content.active { display: block; }
+
+  /* PHASE HEADER */
+  .phase-header { padding: 20px 0 16px; border-bottom: 1px solid var(--border); margin-bottom: 20px; }
+  .phase-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 6px; }
+  .phase-header h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; margin-bottom: 4px; }
+  .phase-meta { font-size: 12px; color: var(--muted); }
+
+  /* ACCOMMODATION BOX */
+  .accom { border-radius: 10px; padding: 12px 14px; margin-bottom: 16px; border-left: 4px solid; }
+  .accom h4 { font-size: 12px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 5px; }
+  .accom-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; }
+  .accom-row { display: flex; gap: 6px; font-size: 11px; }
+  .accom-label { color: var(--muted); min-width: 42px; flex-shrink: 0; }
+  .accom-val { font-weight: 500; }
+
+  /* DAY CARD */
+  .day-card { background: var(--card); border-radius: 12px; border: 1px solid var(--border); margin-bottom: 14px; overflow: hidden; }
+  .day-header { padding: 12px 16px; display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none; }
+  .day-date { width: 42px; height: 42px; border-radius: 8px; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; }
+  .day-date-d { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; line-height: 1; color: white; }
+  .day-date-m { font-size: 9px; font-weight: 500; color: rgba(255,255,255,0.8); letter-spacing: 0.05em; }
+  .day-info { flex: 1; }
+  .day-title { font-size: 13px; font-weight: 700; }
+  .day-sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
+  .day-chevron { color: var(--muted); font-size: 12px; transition: transform 0.2s; }
+  .day-card.open .day-chevron { transform: rotate(180deg); }
+  .day-body { display: none; padding: 0 16px 14px; border-top: 1px solid var(--border); }
+  .day-card.open .day-body { display: block; }
+
+  /* STOPS */
+  .stop { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px dashed var(--border); }
+  .stop:last-child { border-bottom: none; }
+  .stop-time { font-size: 10px; color: var(--muted); min-width: 48px; padding-top: 1px; }
+  .stop-body { flex: 1; }
+  .stop-name { font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+  .stop-desc { font-size: 11px; color: var(--muted); line-height: 1.55; }
+  .tag { display: inline-block; font-size: 9px; font-weight: 700; padding: 1px 6px; border-radius: 99px; margin-top: 4px; letter-spacing: 0.03em; }
+  .t-transit { background: #EDE9FF; color: #5B3DB5; }
+  .t-activity { background: #E2F5EC; color: #1A6B3C; }
+  .t-food { background: #FEF3E2; color: #A05C10; }
+  .t-scenic { background: #FDE8E8; color: #9B2020; }
+  .t-stay { background: #EEF2FF; color: #3B4DB5; }
+  .t-free { background: #ECFDF5; color: #0D7A4A; }
+  .t-train { background: #F3E8FF; color: #7B2DB5; }
+  .t-hike { background: #ECFDF5; color: #166534; }
+  .t-drive { background: #E0F2FE; color: #0369A1; }
+
+  /* TICKET BOX */
+  .ticket-section { background: white; border-radius: 12px; border: 1px solid var(--border); padding: 16px; margin-top: 20px; }
+  .ticket-section h3 { font-size: 13px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+  .ticket-row { display: flex; justify-content: space-between; align-items: flex-start; padding: 8px 0; border-bottom: 1px dashed var(--border); gap: 12px; }
+  .ticket-row:last-child { border-bottom: none; }
+  .ticket-name { font-size: 12px; flex: 1; }
+  .ticket-status { font-size: 11px; color: var(--muted); text-align: right; white-space: nowrap; }
+  .ticket-status.done { color: #1A6B3C; font-weight: 600; }
+  .ticket-status.warn { color: #A05C10; font-weight: 600; }
+
+  /* TIP */
+  .tip { border-radius: 8px; padding: 8px 12px; font-size: 11px; line-height: 1.55; margin-top: 10px; display: flex; gap: 7px; }
+  .tip-warn { background: #FEF3E2; color: #A05C10; border: 1px solid #F6D5A0; }
+  .tip-info { background: #EFF6FF; color: #1E40AF; border: 1px solid #BFDBFE; }
+
+  /* FOOTER */
+  footer { text-align: center; padding: 24px 16px; font-size: 11px; color: var(--muted); border-top: 1px solid var(--border); }
+
+  /* PHASE COLORS */
+  .vienna { --phase: var(--vienna); }
+  .salzburg { --phase: var(--salzburg); }
+  .berlin { --phase: var(--berlin); }
+  .munich { --phase: var(--munich); }
+  .phase-tag { color: var(--phase); }
+  .day-date { background: var(--phase); }
+  .accom { background: color-mix(in srgb, var(--phase) 6%, white); border-left-color: var(--phase); }
+  .accom h4 { color: var(--phase); }
+
+  @media (max-width: 480px) {
+    .hero { padding: 40px 16px 36px; }
+    .hero-stats { gap: 20px; }
+    .phase-btn { padding: 10px 6px; font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-label">Family Trip 2025</div>
+  <h1>歐洲親子之旅<br>維也納・薩爾茲堡・柏林・慕尼黑</h1>
+  <div class="hero-sub">6月28日（日）出發　·　7月11日（六）返程　·　2大3小</div>
+  <div class="hero-stats">
+    <div class="stat"><div class="stat-n">14</div><div class="stat-l">天</div></div>
+    <div class="stat"><div class="stat-n">4</div><div class="stat-l">個城市</div></div>
+    <div class="stat"><div class="stat-n">3</div><div class="stat-l">位孩子</div></div>
+    <div class="stat"><div class="stat-n">2</div><div class="stat-l">個國家</div></div>
   </div>
 </div>
 
+<nav class="phase-nav">
+  <button class="phase-btn active" data-phase="vienna" onclick="showPhase(&#39;vienna&#39;)">
+    <span class="phase-icon">🏛️</span>維也納
+  </button>
+  <button class="phase-btn" data-phase="salzburg" onclick="showPhase(&#39;salzburg&#39;)">
+    <span class="phase-icon">🏔️</span>薩爾茲堡
+  </button>
+  <button class="phase-btn" data-phase="berlin" onclick="showPhase(&#39;berlin&#39;)">
+    <span class="phase-icon">🧱</span>柏林
+  </button>
+  <button class="phase-btn" data-phase="munich" onclick="showPhase(&#39;munich&#39;)">
+    <span class="phase-icon">🏰</span>慕尼黑
+  </button>
+</nav>
+
+<!-- ===== VIENNA ===== -->
+<div class="phase-content vienna active" id="phase-vienna">
+  <div class="phase-header">
+    <div class="phase-tag">第一站 · 奧地利</div>
+    <h2>維也納</h2>
+    <div class="phase-meta">6/28（日）－ 7/1（三）· 3晚</div>
+  </div>
+
+  <div class="accom" style="background:rgba(30,65,90,0.2);border-left-color:#185FA5;">
+    <h4 style="color:#185FA5;">🚇 維也納交通票</h4>
+    <div class="accom-row"><span class="accom-label">票種</span><span class="accom-val">Wiener Linien 72小時無限交通票（地鐵、電車、巴士）</span></div>
+    <div class="accom-row"><span class="accom-label">費用</span><span class="accom-val">€15.30 × 2張（大人）</span></div>
+    <div class="accom-row"><span class="accom-label">啟用</span><span class="accom-val">6/29（一）早上出發前啟用</span></div>
+    <div class="accom-row"><span class="accom-label">購票</span><span class="accom-val">下載 Wiener Linien App 手機購票，不需打票機驗票</span></div>
+    <div class="accom-row"><span class="accom-label">孩童</span><span class="accom-val">6/28（日）孩子免費；6/29起平日單程票約€1.60/次</span></div>
+    <div class="accom-row"><span class="accom-label">機場</span><span class="accom-val">6/28 入境另購 S-Bahn 約€4.20（較便宜）或 CAT €14.90</span></div>
+  </div>
+
+  <!-- 6/28 -->
+  <div class="day-card open">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">28</div><div class="day-date-m">JUN 日</div></div>
+      <div class="day-info"><div class="day-title">抵達維也納 · 輕鬆安頓</div><div class="day-sub">美景宮花園 · 百水公寓 · Naschmarkt</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body">
+      <div class="tip tip-warn">💡 06:50抵達，入境+行李+交通後約9點多才到市區。今天輕鬆為主，讓全家恢復精力。</div>
+      <div class="stop"><div class="stop-time">06:50</div><div class="stop-body"><div class="stop-name">抵達維也納國際機場（VIE）</div><div class="stop-desc">入境領取行李，搭 CAT 約16分鐘至市區，或搭 S-Bahn 約25分鐘（較便宜）。</div><span class="tag t-transit">交通</span></div></div>
+      <div class="stop"><div class="stop-time">上午</div><div class="stop-body"><div class="stop-name">飯店 check-in + 休息</div><div class="stop-desc">放下行李稍作休息，補充精力。</div><span class="tag t-stay">住宿</span></div></div>
+      <div class="stop"><div class="stop-time">下午</div><div class="stop-body"><div class="stop-name">美景宮花園（免費）</div><div class="stop-desc">就在住宿旁，巴洛克對稱花園免費入場，孩子可以盡情奔跑拍照，約30–45分鐘。</div><span class="tag t-free">免費</span></div></div>
+      <div class="stop"><div class="stop-time">傍晚</div><div class="stop-body"><div class="stop-name">百水公寓 Hundertwasserhaus</div><div class="stop-desc">步行約15分鐘，外觀免費參觀，色彩繽紛的曲線建築讓孩子驚呼。對面百水村有紀念品店與餐廳。</div><span class="tag t-scenic">景觀</span></div></div>
+      <div class="stop"><div class="stop-time">晚上</div><div class="stop-body"><div class="stop-name">Naschmarkt 納許市場晚餐</div><div class="stop-desc">維也納最著名的露天市場，各國食物攤位，享用第一頓維也納晚餐。</div><span class="tag t-food">餐飲</span></div></div>
+    </div>
+  </div>
+
+  <!-- 6/29 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">29</div><div class="day-date-m">JUN 一</div></div>
+      <div class="day-info"><div class="day-title">美泉宮 + 霍夫堡茜茜博物館</div><div class="day-sub">Sisi Ticket一票兩用 · 迷宮花園 · 兒童博物館</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body" style="display: none;">
+      <div class="tip tip-info">✅ Sisi Pass 已購票（訂單 260620001421）。入場時間：09:45–10:00，務必準時！Sisi Pass 涵蓋美泉宮+霍夫堡茜茜博物館。迷宮花園另購（約€16/人）。霍夫堡最後入場16:00。</div>
+      <div class="accom" style="background:#E8F5E9;border-left-color:#2E7D32;margin-bottom:10px;">
+        <h4 style="color:#2E7D32">🎫 Sisi Pass 票券資訊</h4>
+        <div class="accom-row"><span class="accom-label">訂單號</span><span class="accom-val">260620001421 / 37419988</span></div>
+        <div class="accom-row"><span class="accom-label">入場</span><span class="accom-val">09:45–10:00（務必準時）</span></div>
+        <div class="accom-row"><span class="accom-label">費用</span><span class="accom-val">€225（2大×€57 + 3小×€37）已付清</span></div>
+        <div class="accom-row"><span class="accom-label">⚠️ 注意</span><span class="accom-val">不可退換 · 霍夫堡不提供行李寄存 · 勿帶大行李</span></div>
+      </div>
+      <div class="stop"><div class="stop-time">09:45</div><div class="stop-body"><div class="stop-name">✅ 美泉宮 Sisi Pass 入場</div><div class="stop-desc">Schönbrunner Schloßstraße 47，掃碼入場，取中文音頻導覽機，Grand Tour 40間廳室，約1.5小時。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">11:15</div><div class="stop-body"><div class="stop-name">美泉宮兒童博物館</div><div class="stop-desc">互動體驗18世紀皇室生活，換上王子公主服裝拍照！固定時段票需提前預訂，約1小時。另購。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">12:15</div><div class="stop-body"><div class="stop-name">宮殿花園午餐</div><div class="stop-desc">在宮殿旁咖啡館用餐，或帶野餐在大花園草坪享用，海神噴泉為背景。</div><span class="tag t-food">餐飲</span></div></div>
+      <div class="stop"><div class="stop-time">13:00</div><div class="stop-body"><div class="stop-name">美泉宮迷宮花園</div><div class="stop-desc">1999年重建的樹籬迷宮，有數學踏石、爬高台鳥瞰、敲鐘挑戰，孩子超愛，約1–1.5小時。迷宮組合票另購（約€16/人）。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">14:15</div><div class="stop-body"><div class="stop-name">Gloriette 丘頂涼亭（花園免費）</div><div class="stop-desc">爬上山丘新古典主義涼亭，俯瞰整座宮殿與維也納市區全景，約30分鐘。</div><span class="tag t-free">免費</span></div></div>
+      <div class="stop"><div class="stop-time">15:00</div><div class="stop-body"><div class="stop-name">搭U4→U3 前往霍夫堡（約15分鐘）</div><div class="stop-desc">Sisi Pass 同日用於霍夫堡，無需另外購票。</div><span class="tag t-transit">交通</span></div></div>
+      <div class="stop"><div class="stop-time">15:30–16:45</div><div class="stop-body"><div class="stop-name">霍夫堡 茜茜博物館 + 皇家公寓 + 銀器收藏</div><div class="stop-desc">茜茜博物館展示女皇伊麗莎白的晚禮服、受刺殺當晚黑色大衣等珍貴遺物。皇家公寓19間廳室原汁原味保留19世紀宮廷風格。Sisi Pass 涵蓋，最後入場16:00。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">17:00</div><div class="stop-body"><div class="stop-name">🍖 Ribs of Vienna 晚餐（已訂位）</div><div class="stop-desc">Weihburggasse 22, Wien 1010（霍夫堡步行約5分鐘）。地下拱頂氣氛餐廳，主打經典肉類料理。5人訂位，週一17:00。</div><span class="tag t-food">餐飲</span></div></div>
+      <div class="stop"><div class="stop-time">20:00</div><div class="stop-body"><div class="stop-name">✨《創世之光》沉浸式燈光秀（Light of Creation）</div><div class="stop-desc">沃蒂夫教堂 Votivkirche（搭U2至Schottentor，步行5分鐘）。以創世紀為主題的30分鐘沉浸式燈光秀，哥德式教堂拱頂化身投影畫布，搭配Emmy獎作曲家原創音樂，六幕呈現宇宙誕生。建議訂 Category I（無遮擋）座位。⚠️ 開演前5分鐘截止入場，夏天無冷氣請穿透氣衣物，禁閃光燈。需提前購票：light-of-creation.com 或 GetYourGuide（可免費取消至24小時前）。</div><span class="tag t-activity">活動</span></div></div>
+    </div>
+  </div>
+
+  <!-- 6/30 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">30</div><div class="day-date-m">JUN 二</div></div>
+      <div class="day-info"><div class="day-title">聖史蒂芬大教堂 + 音樂博物館 + 大摩天輪</div><div class="day-sub">哥德式教堂 · 老城漫步 · 音樂博物館 · Riesenrad</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body" style="display: none;">
+      <div class="tip tip-info">💡 今天是週二！Haus der Musik 暑假週二有專為孩子設計的音樂互動表演，特別值得留意。普拉特遊樂設施取消，改音樂博物館，大摩天輪保留。</div>
+      <div class="stop"><div class="stop-time">09:30</div><div class="stop-body"><div class="stop-name">聖史蒂芬大教堂（Stephansdom）</div><div class="stop-desc">維也納精神象徵，哥德式尖塔高137公尺。內部免費參觀，可付費搭電梯上北塔俯瞰老城全景，約1–1.5小時。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">11:00</div><div class="stop-body"><div class="stop-name">格拉本街老城漫步</div><div class="stop-desc">維也納最著名步行街，路過黑死病紀念柱（Pestsäule），感受維也納貴族氣息。</div><span class="tag t-scenic">景觀</span></div></div>
+      <div class="stop"><div class="stop-time">12:00</div><div class="stop-body"><div class="stop-name">午餐（維也納炸豬排）</div><div class="stop-desc">推薦嚐道地 Wiener Schnitzel 與 Apfelstrudel（蘋果卷），格拉本街附近餐廳選擇豐富。</div><span class="tag t-food">餐飲</span></div></div>
+      <div class="stop"><div class="stop-time">13:30</div><div class="stop-body"><div class="stop-name">音樂博物館 Haus der Musik</div><div class="stop-desc">步行5分鐘即達（Seilerstätte 30）。五樓互動展覽：一樓維也納愛樂博物館、二樓音響實驗室、三樓莫扎特貝多芬故事、四樓虛擬指揮台（指揮維也納愛樂，指揮好鼓掌、指揮差被噓！孩子最愛）。App提供中文導覽，免費下載。家庭票（2大+3小）約€38，約2–2.5小時。開放至22:00。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">16:00</div><div class="stop-body"><div class="stop-name">Stadtpark 城市公園散步（免費）</div><div class="stop-desc">搭地鐵U4至 Stadtpark 站，公園內有金色約翰史特勞斯雕像（必拍！），孩子可在草地放電，環境優美悠閒，約45分鐘。</div><span class="tag t-free">免費</span></div></div>
+      <div class="stop"><div class="stop-time">17:30</div><div class="stop-body"><div class="stop-name">維也納大摩天輪（Wiener Riesenrad）</div><div class="stop-desc">從 Stadtpark 搭地鐵 U4 約10分鐘抵普拉特。1897年建造、65公尺高標誌性摩天輪，在古老木製車廂中俯瞰維也納全景，傍晚光線最美，約30分鐘。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">19:00</div><div class="stop-body"><div class="stop-name">普拉特附近晚餐</div><div class="stop-desc">普拉特公園內有多家餐廳，在燈火通明的摩天輪旁享用維也納最後一晚的晚餐。</div><span class="tag t-food">餐飲</span></div></div>
+    </div>
+  </div>
+
+  <!-- 7/1 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">1</div><div class="day-date-m">JUL 三</div></div>
+      <div class="day-info"><div class="day-title">退房 → 搭火車往薩爾茲堡</div><div class="day-sub">08:28 Railjet 出發 · 約10:50抵達</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body" style="display: none;">
+      <div class="tip tip-warn">⚠️ 早上8:28火車出發！建議7:45前抵達維也納 Hbf。住宿在美景宮附近搭U1地鐵兩站可達。</div>
+      <div class="stop"><div class="stop-time">06:30</div><div class="stop-body"><div class="stop-name">飯店早餐 + 退房</div><div class="stop-desc">提早起床快速用餐，整理行李退房。</div><span class="tag t-stay">住宿</span></div></div>
+      <div class="stop"><div class="stop-time">07:45</div><div class="stop-body"><div class="stop-name">抵達維也納 Hbf 候車</div><div class="stop-desc">找好月台，在車站麵包店替孩子買個可頌當備用早點。</div><span class="tag t-transit">交通</span></div></div>
+      <div class="stop"><div class="stop-time">08:28</div><div class="stop-body"><div class="stop-name">ÖBB Railjet → 薩爾茲堡</div><div class="stop-desc">直達薩爾茲堡不需轉車，車程約2小時25分，附WiFi、餐車與兒童空間。預計10:50抵達。</div><span class="tag t-train">火車</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== SALZBURG ===== -->
+<div class="phase-content salzburg" id="phase-salzburg">
+  <div class="phase-header">
+    <div class="phase-tag">第二站 · 奧地利</div>
+    <h2>薩爾茲堡 + 湖區自駕</h2>
+    <div class="phase-meta">7/1（三）－ 7/5（日）· 4晚 · 7/2–7/4 自駕</div>
+  </div>
+
+  <div class="accom">
+    <h4>🏠 住宿安排</h4>
+    <div class="accom-row"><span class="accom-label">7/1</span><span class="accom-val">薩爾茲堡市區飯店</span></div>
+    <div class="accom-row"><span class="accom-label">7/2–7/4</span><span class="accom-val">SEE &amp; THE CITY apartments · 聖沃夫岡（PIN：5470 · 確認碼：5881.080.937）</span></div>
+    <div class="accom-row"><span class="accom-label">7/4–7/5</span><span class="accom-val">OG2 Rechts · Freilassing（PIN：9515 · 確認碼：5663.582.221）</span></div>
+  </div>
+
+  <!-- 7/1 afternoon -->
+  <div class="day-card open">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">1</div><div class="day-date-m">JUL 三</div></div>
+      <div class="day-info"><div class="day-title">抵達薩爾茲堡 · 老城探索</div><div class="day-sub">米拉貝爾宮 · 老城 · 薩爾茲堡要塞</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body">
+      <div class="stop"><div class="stop-time">10:50</div><div class="stop-body"><div class="stop-name">抵達薩爾茲堡 · check-in</div><div class="stop-desc">放下行李，輕鬆吃個午餐，準備下午探索。</div><span class="tag t-stay">住宿</span></div></div>
+      <div class="stop"><div class="stop-time">14:00</div><div class="stop-body"><div class="stop-name">米拉貝爾宮花園（免費）</div><div class="stop-desc">《真善美》拍攝地，花園免費入場，孩子可盡情奔跑拍照，約30–45分鐘。</div><span class="tag t-free">免費</span></div></div>
+      <div class="stop"><div class="stop-time">15:00</div><div class="stop-body"><div class="stop-name">老城漫步 · 格特萊德街</div><div class="stop-desc">穿越薩爾茲堡老城，路過莫扎特出生地外觀，感受巴洛克風情。</div><span class="tag t-scenic">景觀</span></div></div>
+      <div class="stop"><div class="stop-time">15:30</div><div class="stop-body"><div class="stop-name">薩爾茲堡要塞（Festung Hohensalzburg）</div><div class="stop-desc">搭纜車上山，俯瞰老城全景，王子廳、木偶博物館，約1.5–2小時。7月開放至晚上8點。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">18:00</div><div class="stop-body"><div class="stop-name">老城廣場晚餐</div><div class="stop-desc">在 Alter Markt 或 Residenzplatz 附近享用奧地利晚餐。</div><span class="tag t-food">餐飲</span></div></div>
+    </div>
+  </div>
+
+  <!-- 7/2 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">2</div><div class="day-date-m">JUL 四</div></div>
+      <div class="day-info"><div class="day-title">取車 → 鹽礦 → 冰洞 → 哈爾施塔特</div><div class="day-sub">Hallein鹽礦 · Dachstein冰洞 · 世界遺產小鎮</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body" style="display: none;">
+      <div class="tip tip-warn">⚠️ 今日三個景點，需於16:00前抵達聖沃夫岡入住。鹽礦遊樂場控制在30分鐘內。冰洞洞內-2°C，帶外套！</div>
+      <div class="stop"><div class="stop-time">08:00</div><div class="stop-body"><div class="stop-name">Freilassing 取車</div><div class="stop-desc">薩爾茲堡搭火車約15分鐘抵 Freilassing，德國側租車費用低於奧地利。</div><span class="tag t-drive">自駕</span></div></div>
+      <div class="stop"><div class="stop-time">08:35</div><div class="stop-body"><div class="stop-name">Salzwelten Salzburg 鹽礦（Hallein）</div><div class="stop-desc">世界最古老展示鹽礦，搭礦坑小火車、體驗木製溜滑梯、地底鹽湖木筏，導覽約70分鐘+遊樂場。開放09:00起。大人€35 · 兒童€16。免費停車。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">11:00</div><div class="stop-body"><div class="stop-name">驅車往 Obertraun（Dachstein）</div><div class="stop-desc">車程約45分鐘。</div><span class="tag t-drive">自駕</span></div></div>
+      <div class="stop"><div class="stop-time">11:45</div><div class="stop-body"><div class="stop-name">Dachstein Rieseneishöhle 冰洞</div><div class="stop-desc">搭纜車上山，步行15分鐘抵洞口，導覽約1小時。燈光打亮的冰宮殿震撼人心。現場登記即可，無需預約。大人€48.70 · 兒童€26.80。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">14:00</div><div class="stop-body"><div class="stop-name">哈爾施塔特老鎮傍晚漫遊</div><div class="stop-desc">從Obertraun開車10分鐘，世界遺產小鎮，湖景教堂、木棧道，先快閃打卡。</div><span class="tag t-scenic">景觀</span></div></div>
+      <div class="stop"><div class="stop-time">16:00</div><div class="stop-body"><div class="stop-name">SEE &amp; THE CITY check-in · 聖沃夫岡</div><div class="stop-desc">湖景公寓，PIN碼：5470。傍晚在沃夫岡湖畔散步，享受輕鬆晚餐。</div><span class="tag t-stay">住宿</span></div></div>
+    </div>
+  </div>
+
+  <!-- 7/3 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">3</div><div class="day-date-m">JUL 五</div></div>
+      <div class="day-info"><div class="day-title">Gosau 前後湖健走</div><div class="day-sub">達克斯坦雪山倒影 · 全奧最美健走路線</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body" style="display: none;">
+      <div class="tip tip-warn">⚠️ 建議8點出發搶停車位，夏季午後常有雷陣雨，健走務必早上完成。下午順路停Strobl滑道！</div>
+      <div class="stop"><div class="stop-time">08:00</div><div class="stop-body"><div class="stop-name">出發前往 Gosau Hintertal 停車場</div><div class="stop-desc">聖沃夫岡→Gosau約45分鐘，旺季需早到搶停車位。</div><span class="tag t-drive">自駕</span></div></div>
+      <div class="stop"><div class="stop-time">08:45</div><div class="stop-body"><div class="stop-name">Gosau 前後湖健走</div><div class="stop-desc">從 Vorderer Gosausee 出發，環湖步道至 Hinterer Gosausee，全程約13km，需時3–3.5小時。達克斯坦雪山倒映湖面，步道平緩孩子可輕鬆完成。</div><span class="tag t-hike">健走</span></div></div>
+      <div class="stop"><div class="stop-time">12:30</div><div class="stop-body"><div class="stop-name">Gosau 湖畔午餐</div><div class="stop-desc">健走結束後在湖畔餐廳享用，是整趟行程最療癒的用餐體驗。</div><span class="tag t-food">餐飲</span></div></div>
+      <div class="stop"><div class="stop-time">14:00</div><div class="stop-body"><div class="stop-name">驅車前往 Strobl 夏季滑道（約35分鐘）</div><div class="stop-desc">Gosau→Strobl約35分鐘，途中返回聖沃夫岡方向順路。</div><span class="tag t-drive">自駕</span></div></div>
+      <div class="stop"><div class="stop-time">14:30</div><div class="stop-body"><div class="stop-name">🎿 Sommerrodelbahn Strobl-Gschwendt</div><div class="stop-desc">兩條各1,300公尺的夏季滑道，8歲可獨立乘坐！7–8月開放至19:00。推薦購10人家庭套票（Berg &amp; Tal）€59，約玩2–3趟，1小時。地址：Landauerstr. 15, Strobl（沿湖國道B158旁）。⚠️ 晴天才運作，下雨關閉。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">15:30</div><div class="stop-body"><div class="stop-name">返回聖沃夫岡（5分鐘）</div><div class="stop-desc">Strobl→聖沃夫岡僅5分鐘，傍晚在湖畔享用輕鬆晚餐。</div><span class="tag t-stay">住宿</span></div></div>
+    </div>
+  </div>
+
+  <!-- 7/4 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">4</div><div class="day-date-m">JUL 六</div></div>
+      <div class="day-info"><div class="day-title">哈爾施塔特 → 國王湖（含上湖）→ 還車</div><div class="day-sub">10:00退房 · 上湖全程 · Freilassing入住</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body" style="display: none;">
+      <div class="tip tip-warn">⚠️ 今天提前退房07:30！目標09:00前抵達國王湖碼頭，避開旅行團人潮。船票現場購票即可（不需預約，不能指定班次），15–30分鐘一班。16:00前需離開Salet上湖。晚上19:00看世足16強！</div>
+      <div class="stop"><div class="stop-time">07:30</div><div class="stop-body"><div class="stop-name">⚠️ SEE &amp; THE CITY 提前退房</div><div class="stop-desc">提前聯絡房東告知早退（+43 676 6008355）。行李放車上，立刻出發。</div><span class="tag t-drive">自駕</span></div></div>
+      <div class="stop"><div class="stop-time">08:40</div><div class="stop-body"><div class="stop-name">抵達國王湖碼頭（Schönau am Königssee）</div><div class="stop-desc">聖沃夫岡→國王湖約40分鐘。盡早抵達排隊購票，避開旅行團與午後人潮。</div><span class="tag t-drive">自駕</span></div></div>
+      <div class="stop"><div class="stop-time">09:00</div><div class="stop-body"><div class="stop-name">國王湖 Königssee 遊船（含上湖）</div><div class="stop-desc">搭電動船→聖巴爾多祿茂教堂（35分，停留30分，聆聽號角迴聲）→繼續至 Salet（20分）→步行至上湖 Obersee（15分來回）→上湖停留（40分）→返回碼頭（55分）。全程約4.5–5小時，⚠️ 16:00前需離開Salet。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">14:30</div><div class="stop-body"><div class="stop-name">碼頭附近午餐</div><div class="stop-desc">碼頭附近餐廳或買麵包點心，輕鬆用餐。</div><span class="tag t-food">餐飲</span></div></div>
+      <div class="stop"><div class="stop-time">15:00</div><div class="stop-body"><div class="stop-name">驅車至 Freilassing 還車 · check-in</div><div class="stop-desc">國王湖→Freilassing約20分鐘，還車後步行至 OG2 Rechts。PIN碼：9515，確認碼5663.582.221，停車€10/日需預約。</div><span class="tag t-stay">住宿</span></div></div>
+      <div class="stop"><div class="stop-time">19:00</div><div class="stop-body"><div class="stop-name">⚽ 世足16強賽事 + 晚餐</div><div class="stop-desc">在 Freilassing 當地 Gasthof（傳統巴伐利亞餐廳）邊吃烤豬腳邊看球，德國人看球氣氛熱烈！抵達後可請房東推薦最近的轉播餐廳。</div><span class="tag t-food">餐飲</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BERLIN ===== -->
+<div class="phase-content berlin" id="phase-berlin">
+  <div class="phase-header">
+    <div class="phase-tag">第三站 · 德國</div>
+    <h2>柏林</h2>
+    <div class="phase-meta">7/5（日）－ 7/8（三）· 3晚</div>
+  </div>
+
+  <div class="accom">
+    <h4>🏠 康米紐斯酒店（含早餐）</h4>
+    <div class="accom-grid">
+      <div class="accom-row"><span class="accom-label">地址</span><span class="accom-val">Grünberger Str. 22, 10243 柏林</span></div>
+      <div class="accom-row"><span class="accom-label">入住</span><span class="accom-val">7/5 14:00　退房 7/8 10:00</span></div>
+      <div class="accom-row"><span class="accom-label">確認碼</span><span class="accom-val">6469.996.693　PIN：5727</span></div>
+      <div class="accom-row"><span class="accom-label">電話</span><span class="accom-val">+49 3328 3540110</span></div>
+    </div>
+    <div class="tip tip-info" style="margin-top:8px">ℹ️ 建議購買 Berlin WelcomeCard 72小時 AB版（2張大人卡），每張可免費攜帶3名14歲以下兒童，全家交通一次搞定！</div>
+  </div>
+
+  <!-- ICE ticket info -->
+  <div class="accom" style="background:#F3E8FF;border-left-color:#7B2DB5">
+    <h4 style="color:#7B2DB5">🚄 ICE 高鐵票（已確認）</h4>
+    <div class="accom-row"><span class="accom-label">去程</span><span class="accom-val">7/5 ICE1008 · 慕尼黑11:18→柏林15:23 · 車廂25 · CG90T158</span></div>
+    <div class="accom-row"><span class="accom-label">回程</span><span class="accom-val">7/8 ICE1507 · 柏林11:37→慕尼黑15:43 · 車廂22 · A3ZJ8L05</span></div>
+  </div>
+
+  <!-- 7/5 -->
+  <div class="day-card open">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">5</div><div class="day-date-m">JUL 日</div></div>
+      <div class="day-info"><div class="day-title">Freilassing → 慕尼黑 → 柏林</div><div class="day-sub">ICE1008 11:18出發 · 東側畫廊</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body">
+      <div class="tip tip-warn">⚠️ OG2退房11:00前，慕尼黑火車11:18，時間緊湊！一早退房出發，不要拖延。</div>
+      <div class="stop"><div class="stop-time">早上</div><div class="stop-body"><div class="stop-name">OG2 Rechts 退房 · 還車</div><div class="stop-desc">11:00前退房，步行至車站搭火車往慕尼黑（約1小時）。</div><span class="tag t-drive">自駕</span></div></div>
+      <div class="stop"><div class="stop-time">11:18</div><div class="stop-body"><div class="stop-name">ICE 1008 · 慕尼黑 → 柏林</div><div class="stop-desc">München Hbf 月台22軌出發，車廂25，座位42/44/46/48/51/53/55/57。票價€227.42（3童+5大人）。</div><span class="tag t-train">火車</span></div></div>
+      <div class="stop"><div class="stop-time">15:23</div><div class="stop-body"><div class="stop-name">抵達 Berlin Hbf · 前往飯店</div><div class="stop-desc">月台5軌下車，搭地鐵約20–30分鐘抵康米紐斯酒店，約16:00 check-in。</div><span class="tag t-transit">交通</span></div></div>
+      <div class="stop"><div class="stop-time">16:30</div><div class="stop-body"><div class="stop-name">東側畫廊 East Side Gallery</div><div class="stop-desc">飯店步行約10–15分鐘，沿Spree河欣賞全球最長戶外藝術牆（1.3km），免費，約1小時。</div><span class="tag t-free">免費</span></div></div>
+      <div class="stop"><div class="stop-time">晚上</div><div class="stop-body"><div class="stop-name">腓特烈斯海因區晚餐</div><div class="stop-desc">飯店附近街區，多元餐廳選擇，輕鬆享用。</div><span class="tag t-food">餐飲</span></div></div>
+    </div>
+  </div>
+
+  <!-- 7/6 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">6</div><div class="day-date-m">JUL 一</div></div>
+      <div class="day-info"><div class="day-title">柏林歷史探索 · 猶太人紀念碑</div><div class="day-sub">圍牆紀念館 · 布蘭登堡門 · 猶太人紀念碑 · 國會大廈15:30</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body" style="display: none;">
+      <div class="tip tip-warn">💡 國會大廈玻璃穹頂已預約 15:30，請準時抵達！猶太人紀念碑就在布蘭登堡門步行3分鐘，動線完美。</div>
+      <div class="stop"><div class="stop-time">09:00</div><div class="stop-body"><div class="stop-name">柏林圍牆紀念館</div><div class="stop-desc">Bernauer Straße，感受德國分裂歷史，戶外展覽免費，約45分鐘。</div><span class="tag t-free">免費</span></div></div>
+      <div class="stop"><div class="stop-time">中午</div><div class="stop-body"><div class="stop-name">午餐</div><div class="stop-desc">搭地鐵往市中心途中用餐。</div><span class="tag t-food">餐飲</span></div></div>
+      <div class="stop"><div class="stop-time">13:00</div><div class="stop-body"><div class="stop-name">布蘭登堡門 Brandenburg Gate</div><div class="stop-desc">柏林最標誌性地標，18世紀新古典主義建築，周邊有街頭表演，免費，約30分鐘。</div><span class="tag t-free">免費</span></div></div>
+      <div class="stop"><div class="stop-time">13:30</div><div class="stop-body"><div class="stop-name">被害猶太人紀念碑（Holocaust Memorial）</div><div class="stop-desc">布蘭登堡門步行3分鐘（Cora-Berliner-Str. 1）。2,711塊高低不一的混凝土石碑，佔地1.9公頃，在石碑間穿行帶來強烈的沉思感。地下資訊中心免費（週二至日10:00–20:00），存有約300萬名受難者姓名。全程免費，約1–1.5小時。</div><span class="tag t-free">免費</span></div></div>
+      <div class="stop"><div class="stop-time">14:45</div><div class="stop-body"><div class="stop-name">柏林大教堂 Berliner Dom</div><div class="stop-desc">博物館島上的宏偉大教堂，富麗堂皇內部裝飾與王朝陵墓，步行約15分鐘，約30分鐘。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">15:30</div><div class="stop-body"><div class="stop-name">✅ 國會大廈玻璃穹頂（已預約）</div><div class="stop-desc">螺旋坡道爬升，鏡面錐體環繞，360度俯瞰柏林全景，免費，約1小時。請準時抵達！</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">傍晚</div><div class="stop-body"><div class="stop-name">Potsdamer Platz 晚餐</div><div class="stop-desc">現代化廣場，餐廳選擇豐富。</div><span class="tag t-food">餐飲</span></div></div>
+    </div>
+  </div>
+
+  <!-- 7/7 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">7</div><div class="day-date-m">JUL 二</div></div>
+      <div class="day-info"><div class="day-title">西城區 + 間諜博物館</div><div class="day-sub">威廉皇帝紀念教堂 · Kurfürstendamm · 間諜博物館</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body" style="display: none;">
+      <div class="tip tip-warn">💡 間諜博物館為時段票，需提前預訂14:30場次，遲到無法入場！大人約€18 · 兒童約€12。</div>
+      <div class="stop"><div class="stop-time">10:00</div><div class="stop-body"><div class="stop-name">威廉皇帝紀念教堂（免費）</div><div class="stop-desc">Breitscheidplatz，二戰遺跡「破碎尖塔」，內部藍色玻璃馬賽克靜謐迷人，約30–45分鐘。</div><span class="tag t-free">免費</span></div></div>
+      <div class="stop"><div class="stop-time">10:45</div><div class="stop-body"><div class="stop-name">Kurfürstendamm 庫達姆大街</div><div class="stop-desc">柏林西側最著名購物大街，漫步逛街，感受不同於東柏林的氣氛。</div><span class="tag t-scenic">景觀</span></div></div>
+      <div class="stop"><div class="stop-time">中午</div><div class="stop-body"><div class="stop-name">西城區午餐</div><div class="stop-desc">Kurfürstendamm 附近餐廳用餐。</div><span class="tag t-food">餐飲</span></div></div>
+      <div class="stop"><div class="stop-time">14:00</div><div class="stop-body"><div class="stop-name">搭地鐵往 Potsdamer Platz</div><div class="stop-desc">約15分鐘。</div><span class="tag t-transit">交通</span></div></div>
+      <div class="stop"><div class="stop-time">14:30</div><div class="stop-body"><div class="stop-name">German Spy Museum 間諜博物館</div><div class="stop-desc">雷射迷宮、密碼破解、測謊機等互動體驗，約1.5–2小時。大人€18 · 兒童€12。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">傍晚</div><div class="stop-body"><div class="stop-name">Potsdamer Platz 晚餐 · 整理行李</div><div class="stop-desc">準備明天移動，行李提前整理好。</div><span class="tag t-food">餐飲</span></div></div>
+    </div>
+  </div>
+
+  <!-- 7/8 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">8</div><div class="day-date-m">JUL 三</div></div>
+      <div class="day-info"><div class="day-title">猶太博物館 → ICE 返慕尼黑</div><div class="day-sub">Jüdisches Museum · 11:37出發 · 15:43抵慕尼黑</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body" style="display: none;">
+      <div class="tip tip-warn">⚠️ 10:00退房，行李前一晚整理好寄放飯店前台，參觀完直接取行李前往車站。猶太博物館→Berlin Hbf約20分鐘地鐵。</div>
+      <div class="stop"><div class="stop-time">09:00</div><div class="stop-body"><div class="stop-name">猶太博物館（Jüdisches Museum Berlin）</div><div class="stop-desc">Lindenstraße 9–14，由建築師 Daniel Libeskind 設計的鋸齒形建築本身就是藝術品，充滿象徵意義的空間設計。有專為兒童設計的 ANOHA 諾亞方舟互動展區，適合9–12歲孩子。約1.5–2小時。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">10:00前</div><div class="stop-body"><div class="stop-name">康米紐斯酒店退房 · 取行李</div><div class="stop-desc">行李前一晚寄放飯店前台，參觀完取回直接前往車站。</div><span class="tag t-stay">住宿</span></div></div>
+      <div class="stop"><div class="stop-time">10:30</div><div class="stop-body"><div class="stop-name">搭地鐵前往 Berlin Hbf</div><div class="stop-desc">約20分鐘，抵達後確認月台4軌，輕鬆候車。</div><span class="tag t-transit">交通</span></div></div>
+      <div class="stop"><div class="stop-time">11:37</div><div class="stop-body"><div class="stop-name">ICE 1507 · 柏林 → 慕尼黑</div><div class="stop-desc">Berlin Hbf 月台4軌出發，車廂22，座位21–28。票價€194.92（3童+5大人），Ticketcode：A3ZJ8L05。</div><span class="tag t-train">火車</span></div></div>
+      <div class="stop"><div class="stop-time">15:43</div><div class="stop-body"><div class="stop-name">抵達 München Hbf · check-in</div><div class="stop-desc">月台22軌抵達，前往慕尼黑飯店 check-in。</div><span class="tag t-stay">住宿</span></div></div>
+      <div class="stop"><div class="stop-time">17:00</div><div class="stop-body"><div class="stop-name">慕尼黑王宮（Residenz）</div><div class="stop-desc">步行或地鐵一站至 Odeonsplatz，德國最大市內宮殿。17:00最後入場，先逛外庭院與Hofgarten（霍夫花園，免費）感受規模，大人€10，18歲以下免費。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">18:30</div><div class="stop-body"><div class="stop-name">Marienplatz 附近晚餐</div><div class="stop-desc">感受慕尼黑老城氣氛，道地巴伐利亞料理。</div><span class="tag t-food">餐飲</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MUNICH ===== -->
+<div class="phase-content munich" id="phase-munich">
+  <div class="phase-header">
+    <div class="phase-tag">第四站 · 德國</div>
+    <h2>慕尼黑</h2>
+    <div class="phase-meta">7/8（三）－ 7/11（六）· 3晚</div>
+  </div>
+
+  <div class="accom">
+    <h4>🏠 Jugendherberge München City（慕尼黑市立青年旅館）</h4>
+    <div class="accom-row"><span class="accom-label">地址</span><span class="accom-val">8 Winthirplatz, 80639 慕尼黑（諾伊豪森-寧芬堡區）</span></div>
+    <div class="accom-row"><span class="accom-label">電話</span><span class="accom-val">+49 89 20244490</span></div>
+    <div class="accom-row"><span class="accom-label">入住</span><span class="accom-val">7/8（三）15:00　退房 7/11（六）06:00–10:00</span></div>
+    <div class="accom-row"><span class="accom-label">確認碼</span><span class="accom-val">6720.949.855　PIN：3739</span></div>
+    <div class="accom-row"><span class="accom-label">房間</span><span class="accom-val">四人房附衛浴 × 2間，含早餐，不可取消</span></div>
+    <div class="accom-row"><span class="accom-label">費用</span><span class="accom-val">€1,153.48（Booking.com 已支付 €115.35）</span></div>
+    <div class="accom-row"><span class="accom-label">⚠️ 重要</span><span class="accom-val">需青年旅館會員資格！抵達當日辦理 HI-Guest Card 家庭卡 €18（一次性）即可　·　無停車設施</span></div>
+  </div>
+
+  <!-- 7/9 -->
+  <div class="day-card open">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">9</div><div class="day-date-m">JUL 四</div></div>
+      <div class="day-info"><div class="day-title">新天鵝堡 + 高天鵝堡全日</div><div class="day-sub">童話城堡外觀 · 高天鵝堡導覽 · Füssen小鎮</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body">
+      <div class="tip tip-warn">💡 選週四出發，人潮比週五少，票更好搶、停車更容易。建議8點前出發搶早場。高天鵝堡18歲以下免費，大人€21，建議提前購票。</div>
+      <div class="stop"><div class="stop-time">08:00</div><div class="stop-body"><div class="stop-name">驅車前往 Hohenschwangau</div><div class="stop-desc">慕尼黑→新天鵝堡約2小時，週四早出發停車位更容易找，比週末從容許多。</div><span class="tag t-drive">自駕</span></div></div>
+      <div class="stop"><div class="stop-time">10:00</div><div class="stop-body"><div class="stop-name">新天鵝堡外觀 + 瑪麗橋</div><div class="stop-desc">迪士尼睡美人城堡原型！步行上山至瑪麗橋（Marienbrücke）拍最美城堡全景照，約1–1.5小時。不進內部，省下排隊等候時間。</div><span class="tag t-scenic">景觀</span></div></div>
+      <div class="stop"><div class="stop-time">11:30</div><div class="stop-body"><div class="stop-name">高天鵝堡（Hohenschwangau Castle）</div><div class="stop-desc">路德維希二世的童年居所，步行約10–15分鐘可達。強制導覽約35分鐘，需在山谷售票中心購票。18歲以下免費，大人約€21。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">13:30</div><div class="stop-body"><div class="stop-name">Füssen 小鎮午餐 + 漫步</div><div class="stop-desc">中世紀小鎮，巴洛克教堂與彩繪房屋，午餐後步行閒逛，輕鬆收尾。</div><span class="tag t-food">餐飲</span></div></div>
+      <div class="stop"><div class="stop-time">15:00</div><div class="stop-body"><div class="stop-name">返回慕尼黑</div><div class="stop-desc">車程約2小時，17:00前出發避開車流。</div><span class="tag t-drive">自駕</span></div></div>
+    </div>
+  </div>
+
+  <!-- 7/10 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">10</div><div class="day-date-m">JUL 五</div></div>
+      <div class="day-info"><div class="day-title">德意志博物館 + 慕尼黑王宮 + Eisbachwelle</div><div class="day-sub">科技博物館 · 巴伐利亞王宮 · 週五衝浪人潮最旺</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body" style="display: none;">
+      <div class="tip tip-warn">💡 三個景點都在市中心步行或地鐵可達範圍內，動線順暢不需開車。德意志博物館非常大，建議出發前和孩子確認最想看的展區（飛機館、礦山館、互動科學館），不要漫無目的走。</div>
+      <div class="stop"><div class="stop-time">09:00</div><div class="stop-body"><div class="stop-name">德意志博物館（Deutsches Museum）</div><div class="stop-desc">世界最大科技博物館，上午人潮最少、孩子精力最充沛是最佳參觀時機。互動展區豐富，9–12歲完全吃得到，約3–3.5小時。家庭票€33，18歲以下免費，開放至17:00。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">12:30</div><div class="stop-body"><div class="stop-name">附近午餐</div><div class="stop-desc">博物館 Isar 河畔附近餐廳，或在 Marienplatz 步行街享用午餐。</div><span class="tag t-food">餐飲</span></div></div>
+      <div class="stop"><div class="stop-time">13:30</div><div class="stop-body"><div class="stop-name">慕尼黑王宮（Residenz）</div><div class="stop-desc">歐洲最大市內宮殿，巴伐利亞維特爾斯巴赫王朝700年居所。與維也納霍夫堡風格不同，可對比兩地皇室文化差異。室內廳室+Hofgarten花園，約1.5小時。18歲以下免費，開放至17:00（Odeonsplatz，地鐵約10分鐘）。</div><span class="tag t-activity">活動</span></div></div>
+      <div class="stop"><div class="stop-time">15:15</div><div class="stop-body"><div class="stop-name">步行前往英格蘭公園</div><div class="stop-desc">從 Odeonsplatz 步行約15分鐘即達 Eisbachwelle，輕鬆散步消化午餐。</div><span class="tag t-transit">交通</span></div></div>
+      <div class="stop"><div class="stop-time">15:30</div><div class="stop-body"><div class="stop-name">Eisbachwelle 衝浪觀賞</div><div class="stop-desc">週五下午人潮最旺、衝浪客技術展示最精彩！免費觀看，感受慕尼黑城市衝浪奇景，約1小時。觀後可在英格蘭公園草地放鬆，或前往中國塔啤酒花園小歇。</div><span class="tag t-free">免費</span></div></div>
+      <div class="stop"><div class="stop-time">17:00</div><div class="stop-body"><div class="stop-name">Marienplatz 最後伴手禮採購</div><div class="stop-desc">Kaufingerstrasse 步行街採購最後伴手禮，莫扎特巧克力、巴伐利亞啤酒杯等。</div><span class="tag t-scenic">景觀</span></div></div>
+      <div class="stop"><div class="stop-time">傍晚</div><div class="stop-body"><div class="stop-name">Viktualienmarkt 維特市場告別晚餐</div><div class="stop-desc">露天食品市場，德國香腸、椒鹽麵包，道地巴伐利亞告別晚餐！為整趟旅程畫上完美句點。</div><span class="tag t-food">餐飲</span></div></div>
+    </div>
+  </div>
+
+  <!-- 7/11 -->
+  <div class="day-card">
+    <div class="day-header" onclick="toggleDay(this)">
+      <div class="day-date"><div class="day-date-d">11</div><div class="day-date-m">JUL 六</div></div>
+      <div class="day-info"><div class="day-title">慕尼黑機場 ✈ 離境</div><div class="day-sub">13:00飛機 · 10:00前出發</div></div>
+      <div class="day-chevron">▼</div>
+    </div>
+    <div class="day-body" style="display: none;">
+      <div class="tip tip-warn">⚠️ 市區→機場搭S8/S1地鐵約40分鐘，建議10:00前出發，預留充裕報到時間。</div>
+      <div class="stop"><div class="stop-time">早上</div><div class="stop-body"><div class="stop-name">飯店早餐 + 退房</div><div class="stop-desc">悠閒吃個早餐，整理行李退房，可在 Marienplatz 附近買最後伴手禮。</div><span class="tag t-stay">住宿</span></div></div>
+      <div class="stop"><div class="stop-time">10:00</div><div class="stop-body"><div class="stop-name">搭 S-Bahn 前往慕尼黑機場</div><div class="stop-desc">S8 或 S1 線約40分鐘直達，10點前出發預留充裕時間。</div><span class="tag t-transit">交通</span></div></div>
+      <div class="stop"><div class="stop-time">13:00</div><div class="stop-body"><div class="stop-name">搭機離開慕尼黑 ✈</div><div class="stop-desc">帶著維也納、薩爾茲堡、柏林、慕尼黑的滿滿回憶，踏上歸途！</div><span class="tag t-transit">交通</span></div></div>
+    </div>
+  </div>
+
+  <div class="ticket-section">
+    <h3>🎫 票務 / 預約清單</h3>
+    <div class="ticket-row"><div class="ticket-name">✅ Sisi Pass（美泉宮+霍夫堡）6/29 09:45入場</div><div class="ticket-status done">已購票 €225 訂單260620001421</div></div>
+    <div class="ticket-row"><div class="ticket-name">✅ Ribs of Vienna 晚餐訂位（6/29 17:00，5人）</div><div class="ticket-status done">已確認</div></div>
+    <div class="ticket-row"><div class="ticket-name">✅ 國會大廈玻璃穹頂（7/6 15:30）</div><div class="ticket-status done">已預約 免費</div></div>
+    <div class="ticket-row"><div class="ticket-name">✅ ICE1008 慕尼黑→柏林（7/5 11:18）</div><div class="ticket-status done">已購票 CG90T158</div></div>
+    <div class="ticket-row"><div class="ticket-name">✅ ICE1507 柏林→慕尼黑（7/8 11:37）</div><div class="ticket-status done">已購票 A3ZJ8L05</div></div>
+    <div class="ticket-row"><div class="ticket-name">《創世之光》燈光秀（6/29 20:00，Category I）</div><div class="ticket-status warn">需提前購票 light-of-creation.com</div></div>
+    <div class="ticket-row"><div class="ticket-name">維也納交通票 Wiener Linien 72hr × 2張</div><div class="ticket-status warn">6/29早上購買 Wiener Linien App</div></div>
+    <div class="ticket-row"><div class="ticket-name">美泉宮迷宮花園組合票（6/29）</div><div class="ticket-status warn">需另購 約€16/人</div></div>
+    <div class="ticket-row"><div class="ticket-name">美泉宮兒童博物館（6/29，選好時段）</div><div class="ticket-status warn">需另購並預訂時段</div></div>
+    <div class="ticket-row"><div class="ticket-name">薩爾茲堡要塞（7/1）</div><div class="ticket-status warn">建議提前購票</div></div>
+    <div class="ticket-row"><div class="ticket-name">Salzwelten鹽礦（7/2，大人€35·兒童€16）</div><div class="ticket-status">現場購票即可</div></div>
+    <div class="ticket-row"><div class="ticket-name">Dachstein冰洞（7/2，大人€48.70·兒童€26.80）</div><div class="ticket-status">現場登記即可</div></div>
+    <div class="ticket-row"><div class="ticket-name">Strobl夏季滑道（7/3，10人家庭套票）</div><div class="ticket-status">現場購票 €59</div></div>
+    <div class="ticket-row"><div class="ticket-name">國王湖船票（7/4，現場購票，早到為上）</div><div class="ticket-status">現場購票，不可預約</div></div>
+    <div class="ticket-row"><div class="ticket-name">OG2 Rechts 停車（7/4，€10/日）</div><div class="ticket-status warn">需提前預約</div></div>
+    <div class="ticket-row"><div class="ticket-name">猶太博物館（7/8）</div><div class="ticket-status warn">建議網路購票</div></div>
+    <div class="ticket-row"><div class="ticket-name">間諜博物館（7/7 14:30）</div><div class="ticket-status warn">需提前訂時段票</div></div>
+    <div class="ticket-row"><div class="ticket-name">Berlin WelcomeCard 72hr AB × 2張</div><div class="ticket-status warn">抵柏林後購買</div></div>
+    <div class="ticket-row"><div class="ticket-name">高天鵝堡（7/9，18歲以下免費·大人€21）</div><div class="ticket-status warn">建議提前購票</div></div>
+    <div class="ticket-row"><div class="ticket-name">德意志博物館（7/10 上午，家庭票€33）</div><div class="ticket-status">現場購票即可</div></div>
+    <div class="ticket-row"><div class="ticket-name">慕尼黑王宮（7/8傍晚+7/10下午，18歲以下免費）</div><div class="ticket-status">現場購票即可</div></div>
+    <div class="ticket-row"><div class="ticket-name">⚠️ 慕尼黑青年旅館 HI-Guest Card 家庭卡</div><div class="ticket-status warn">抵達當日櫃台辦理 €18</div></div>
+  </div>
+</div>
+
+<footer>
+  2025 歐洲親子之旅 · 6/28–7/11 · 維也納 · 薩爾茲堡 · 柏林 · 慕尼黑
+</footer>
+
 <script>
-const phaseColors=["#1D9E75","#185FA5","#D85A30"];
-const phaseNames=["奧地利薩爾茲堡","奧地利湖區","德國慕尼黑"];
-const tagMap={drive:"自駕",activity:"活動",food:"餐飲",scenic:"景觀",stay:"住宿",new:"新增"};
-
-const days=[
-  {phase:0,label:"7/1 週二",title:"抵達薩爾茲堡",sub:"老城漫遊 · 米拉貝爾宮",
-   tip:{type:"info",text:"今天輕鬆遊，不趕行程。建議住舊城區附近，步行即達各景點。"},
-   stops:[
-    {time:"抵達後",name:"薩爾茲堡市區飯店 check-in",desc:"建議住 Altstadt（舊城區）附近，省去交通時間。",tag:"stay"},
-    {time:"下午",name:"米拉貝爾宮花園",desc:"《真善美》拍攝地，花園免費入場，孩子可以盡情奔跑拍照。",tag:"scenic"},
-    {time:"傍晚",name:"格特萊德街 · 老城漫步",desc:"欣賞巴洛克建築，探訪莫扎特出生地外觀，在廣場附近享用第一頓奧地利晚餐。",tag:"scenic"}
-  ]},
-  {phase:0,label:"7/2 週三",title:"取車 → 國王湖 → 聖沃夫岡",sub:"Freilassing取車 · 國王湖遊船",
-   tip:{type:"warn",text:"國王湖旺季船票請提前網路預購！8–9點抵達碼頭最佳，避開人潮。"},
-   stops:[
-    {time:"早上",name:"搭火車至 Freilassing 取車",desc:"薩爾茲堡搭火車約15分鐘，德國側租車費用低於奧地利，手續方便。",tag:"drive"},
-    {time:"上午",name:"國王湖 Königssee 遊船",desc:"車程約20分鐘至碼頭。搭電動船至聖巴爾多祿茂教堂，聆聽號角山谷迴聲。預留3–4小時。",tag:"activity"},
-    {time:"下午",name:"驅車前往聖沃夫岡",desc:"國王湖→聖沃夫岡約1小時，沿途景色優美。",tag:"drive"},
-    {time:"傍晚",name:"入住聖沃夫岡湖景民宿",desc:"建議選有湖景陽台的房型，黃昏在湖邊散步感受靜謐。",tag:"stay"}
-  ]},
-  {phase:1,label:"7/3 週四",title:"沙富山 + 高薩湖",sub:"蒸汽小火車 · Gosausee徒步",
-   tip:{type:"green",text:"上午搭火車、下午徒步，動靜兼具，是體力消耗最大的一天，晚上好眠保證。"},
-   stops:[
-    {time:"上午",name:"SchafbergBahn 百年蒸汽小火車",desc:"從聖沃夫岡出發登沙富山頂，俯瞰湖區全景，來回含遊覽約2.5小時，需提前預訂。",tag:"activity"},
-    {time:"中午",name:"午餐後驅車前往高薩湖",desc:"車程約45分鐘。",tag:"drive"},
-    {time:"下午",name:"Gosausee 環湖徒步",desc:"湖水清澈見底，達克斯坦雪山為背景，環湖步道平緩，約2–3小時，孩子輕鬆應付。",tag:"activity"},
-    {time:"傍晚",name:"湖邊晚餐後返回聖沃夫岡",desc:"Gosausee 湖畔餐廳享用晚餐，再驅車約45分鐘返回住宿。",tag:"food"}
-  ]},
-  {phase:1,label:"7/4 週五",title:"哈爾施塔特 + Dachstein 冰洞",sub:"世界遺產小鎮 · 冰洞 · 古鹽礦",
-   tip:{type:"warn",text:"⚠️ 今天景點最多！建議 10:30 前抵達哈爾施塔特，下午鹽礦與冰洞擇一深度遊，或兩個都去但節奏要緊湊。冰洞內 -2°C，記得帶外套。"},
-   stops:[
-    {time:"10:30前",name:"抵達 Hallstatt P1 停車場",desc:"從聖沃夫岡出發約40分鐘，務必早到。步行進鎮至湖邊經典角度拍照打卡。",tag:"drive"},
-    {time:"上午",name:"哈爾施塔特老鎮漫遊",desc:"世界遺產小鎮，湖景教堂、木棧道、彩色房屋，慢慢走慢慢拍。",tag:"scenic"},
-    {time:"下午早",name:"Dachstein Rieseneishöhle 冰洞",desc:"從哈爾施塔特開車約10分鐘到 Obertraun 纜車站，搭纜車上山後步行15–20分鐘抵達洞口。洞內有冰瀑布、天然冰滑梯，超現實魔幻！預留2小時。",tag:"activity"},
-    {time:"下午",name:"Hallstatt 古鹽礦（可選）",desc:"搭纜車上山，體驗千年鹽礦與礦坑木滑梯，9–12歲孩子保證歡呼。若冰洞已花較多時間，今天可跳過。",tag:"activity"},
-    {time:"傍晚",name:"移往薩爾茲堡市區 check-in",desc:"從哈爾施塔特驅車約1小時返回薩爾茲堡，入住市區飯店。",tag:"drive"}
-  ]},
-  {phase:0,label:"7/5 週六",title:"薩爾茲堡 → 慕尼黑",sub:"海爾布倫宮 · 惡作劇噴泉 · 前往慕尼黑",
-   tip:{type:"warn",text:"海爾布倫宮噴泉記得帶換洗衣物！孩子必定全身濕透。"},
-   stops:[
-    {time:"上午",name:"Schloss Hellbrunn 惡作劇噴泉",desc:"17世紀主教的夏宮，機關水柱讓孩子笑到停不下來，旁邊薩爾茲堡動物園可順遊。",tag:"activity"},
-    {time:"中午",name:"薩爾茲堡最後午餐 + 買伴手禮",desc:"老城區享用最後一頓奧地利料理，採購莫扎特巧克力等伴手禮。",tag:"food"},
-    {time:"下午",name:"Freilassing 還車",desc:"驅車約25分鐘還車，隨後搭火車前往慕尼黑，車程約1.5小時。",tag:"drive"},
-    {time:"傍晚",name:"抵達慕尼黑 check-in",desc:"入住慕尼黑市區飯店，建議選靠近 Marienplatz 或 Isar 河畔，交通便利。",tag:"stay"}
-  ]},
-  {phase:2,label:"7/6 週日",title:"慕尼黑市區探索",sub:"瑪麗廣場 · 英格蘭公園 · 德意志博物館",
-   tip:{type:"info",text:"德意志博物館是世界最大科技博物館，建議購買家庭票（€33）。18歲以下免費！"},
-   stops:[
-    {time:"上午",name:"Marienplatz 瑪麗廣場",desc:"慕尼黑的心臟。11:00觀看市政廳報時鐘木偶表演，孩子很愛看。",tag:"scenic"},
-    {time:"上午",name:"英格蘭公園（Englischer Garten）",desc:"世界最大城市公園之一，孩子放電奔跑，順帶看河邊衝浪客（Eisbachwelle），全年無休的奇景！",tag:"activity"},
-    {time:"下午",name:"德意志博物館（Deutsches Museum）",desc:"世界最大科技博物館，互動展區豐富，9–12歲完全吃得到，可輕鬆玩3–4小時。18歲以下免費提醒：館內很大，建議提前規劃想看的展區。",tag:"activity"},
-    {time:"傍晚",name:"Viktualienmarkt 維特市場",desc:"露天食品市場，嚐德國香腸、椒鹽麵包，感受道地巴伐利亞飲食文化。",tag:"food"}
-  ]},
-  {phase:2,label:"7/7 週一",title:"新天鵝堡全日",sub:"童話城堡 · 瑪麗橋 · Füssen",
-   tip:{type:"warn",text:"⚠️ 新天鵝堡票務極搶手！7月旺季請至少4–6週前在官網預訂時段票，現場票通常中午前售罄。18歲以下免費入場。"},
-   stops:[
-    {time:"早上",name:"驅車前往 Hohenschwangau",desc:"慕尼黑→新天鵝堡約2小時，建議8點前出發搶早場。",tag:"drive"},
-    {time:"上午",name:"新天鵝堡（Neuschwanstein Castle）",desc:"迪士尼睡美人城堡原型！導覽約30分鐘，18歲以下免費。導覽後步行至瑪麗橋拍最美外觀照。預留2.5小時。",tag:"activity"},
-    {time:"下午",name:"霍亨施萬高城堡（可選）",desc:"路德維希二世童年居所，就在山腳下。可合購 Kings Ticket，需預留2.5小時間隔。",tag:"activity"},
-    {time:"下午",name:"Füssen 小鎮午後漫步",desc:"中世紀小鎮，巴洛克教堂與彩繪房屋，步行閒逛吃個午茶輕鬆收尾。",tag:"scenic"},
-    {time:"傍晚",name:"返回慕尼黑",desc:"車程約2小時，建議17:00前出發避開車流。",tag:"drive"}
-  ]},
-  {phase:2,label:"7/8 週二",title:"楚格峰 · 德國最高峰",sub:"Garmisch-Partenkirchen · 登頂2962m",
-   tip:{type:"warn",text:"強烈建議查天氣再成行！晴天才值得。頂部約5–10°C，記得帶外套。成人纜車票約€66，有家庭優惠票。"},
-   stops:[
-    {time:"早上",name:"驅車前往 Garmisch-Partenkirchen",desc:"慕尼黑→加米施約1.5小時，建議8點前出發搭早班纜車。",tag:"drive"},
-    {time:"上午",name:"Eibsee 艾布湖",desc:"纜車站前的翡翠湖，景色絕美，孩子可在湖畔玩耍或租划艇，是登頂前絕佳的熱身景點。",tag:"scenic"},
-    {time:"上午–下午",name:"搭纜車登楚格峰頂（2962m）",desc:"德國最高峰，視野可見四國400座山峰！頂部有冰川、展望台與餐廳，來回約需3–4小時。",tag:"activity"},
-    {time:"下午",name:"Garmisch 小鎮午後",desc:"返回山腳，在阿爾卑斯度假小鎮享用午餐，散步欣賞彩繪房屋。",tag:"food"},
-    {time:"傍晚",name:"返回慕尼黑",desc:"車程約1.5小時。",tag:"drive"}
-  ]},
-  {phase:2,label:"7/9 週三",title:"奧林匹克公園 + BMW世界",sub:"寧芬堡宮 · 輕鬆半日",
-   tip:{type:"green",text:"今天行程可依體力彈性調整，若孩子已累就輕鬆待在市區放鬆即可。"},
-   stops:[
-    {time:"上午",name:"奧林匹克公園（Olympiapark）",desc:"1972年慕尼黑奧運場地，有迷你小火車環園，SeaLife 水族館與跳床公園。",tag:"activity"},
-    {time:"上午",name:"BMW Welt（BMW世界）",desc:"免費入場的BMW展示館，展出最新概念車與歷史車款，緊鄰奧林匹克公園步行可達。",tag:"activity"},
-    {time:"下午",name:"寧芬堡宮（Nymphenburg Palace）",desc:"巴伐利亞王室夏宮，花園免費入場，可租划艇在運河泛舟，非常休閒。",tag:"scenic"},
-    {time:"下午（備選）",name:"Linderhof Palace 林德霍夫宮",desc:"路德維希二世最小城堡，距慕尼黑約1.5小時。金碧輝煌洛可可宮殿，花園有維納斯洞窟。若時間充裕可前往。",tag:"scenic"}
-   ]},
-  {phase:2,label:"7/10 週四",title:"慕尼黑最後一天",sub:"野生動物公園 · 購物 · 告別晚餐",
-   tip:{type:"green",text:"明天13:00飛機，今晚整理行李、確認護照、換匯，輕鬆享受最後夜晚。"},
-   stops:[
-    {time:"上午",name:"Wildpark Poing 野生動物公園",desc:"麋鹿與孔雀自由漫步，€0.5買飼料可直接手餵動物，孩子超愛！評分4.7顆星。",tag:"activity"},
-    {time:"下午",name:"市區購物 + 英格蘭公園",desc:"Kaufingerstrasse 採購最後伴手禮，下午英格蘭公園再玩一次看衝浪客作結。",tag:"scenic"},
-    {time:"晚上",name:"告別晚餐",desc:"選一家道地巴伐利亞啤酒餐廳（Hofbräuhaus 或 Augustiner），烤豬腳、椒鹽麵包，為旅程畫上句點。",tag:"food"}
-   ]},
-  {phase:2,label:"7/11 週五",title:"慕尼黑機場 ✈ 離境",sub:"13:00飛機 · 建議10:30前抵達機場",
-   tip:{type:"warn",text:"市區→機場搭S8/S1地鐵約40分鐘，建議10:00前出發，預留充裕報到時間。"},
-   stops:[
-    {time:"早上",name:"飯店早餐 + 退房",desc:"悠閒吃個早餐，整理行李，退房。",tag:"stay"},
-    {time:"10:00",name:"搭S-Bahn前往慕尼黑機場",desc:"S8或S1線約40分鐘直達，建議10點前出發。",tag:"drive"},
-    {time:"13:00",name:"搭機離開慕尼黑 ✈",desc:"帶著滿滿的回憶，踏上歸途！",tag:"drive"}
-   ]}
-];
-
-const pts=[
-  {x:103,y:210,name:"薩爾茲堡",phase:0},
-  {x:45,y:242,name:"國王湖",phase:0},
-  {x:130,y:178,name:"聖沃夫岡",phase:1},
-  {x:212,y:148,name:"高薩湖",phase:1},
-  {x:295,y:188,name:"哈爾施塔特",phase:1},
-  {x:278,y:168,name:"Dachstein冰洞",phase:1,isNew:true},
-  {x:310,y:108,name:"慕尼黑",phase:2},
-  {x:175,y:132,name:"新天鵝堡",phase:2},
-  {x:195,y:175,name:"楚格峰",phase:2},
-  {x:220,y:120,name:"林德霍夫宮",phase:2},
-  {x:370,y:75,name:"機場",phase:2}
-];
-
-let cur=0;
-
-function buildTabs(){
-  let html='';let lp=-1;
-  days.forEach((d,i)=>{
-    if(d.phase!==lp){html+=`<div class="section-label">${phaseNames[d.phase]}</div>`;lp=d.phase;}
-    const col=phaseColors[d.phase];const active=i===cur;
-    html+=`<div class="day-tab${active?' active':''}" onclick="go(${i})" style="border-left:3px solid ${active?col:'transparent'}">
-      <span class="dnum" style="${active?'color:'+col:''}">${d.label}</span>
-      <div><div class="dtitle">${d.title}</div><div class="dsub">${d.sub}</div></div>
-    </div>`;
-  });
-  document.getElementById('tabs').innerHTML=html;
+function showPhase(phase) {
+  document.querySelectorAll('.phase-content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.phase-btn').forEach(el => el.classList.remove('active'));
+  document.getElementById('phase-' + phase).classList.add('active');
+  document.querySelector('[data-phase="' + phase + '"]').classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
-function buildDetail(){
-  const d=days[cur];const col=phaseColors[d.phase];
-  const tc={'warn':'tip-warn','info':'tip-info','green':'tip-green'}[d.tip.type];
-  const ti={'warn':'💡','info':'ℹ️','green':'✅'}[d.tip.type];
-  const hasDachstein=cur===3;
-  document.getElementById('detail').innerHTML=`
-    <div class="dlabel" style="color:${col}">${phaseNames[d.phase]} · ${d.label}</div>
-    <div class="dtitle2">${d.title}</div>
-    <div class="ddate">${d.sub}</div>
-    ${hasDachstein?`<div class="price-box">🧊 Dachstein Cave Ticket（纜車+冰洞）2025票價：大人 €48.70 · 兒童 €26.80 · 一家五口合計約 €124 · 無需預約，現場登山。</div>`:''}
-    <div class="tip ${tc}"><span>${ti}</span><span>${d.tip.text}</span></div>
-    <div class="stops">${d.stops.map(s=>`
-      <div class="scard" style="border-left-color:${col}">
-        <div class="stime">${s.time}</div>
-        <div class="sname">${s.name}${s.isNew?'<span class="new-badge">新增</span>':''}</div>
-        <div class="sdesc">${s.desc}</div>
-        <span class="stag t-${s.isNew?'new':s.tag}">${s.isNew?'新加入':tagMap[s.tag]}</span>
-      </div>`).join('')}
-    </div>`;
+function toggleDay(header) {
+  const card = header.parentElement;
+  card.classList.toggle('open');
+  if (card.classList.contains('open')) {
+    card.querySelector('.day-body').style.display = 'block';
+  } else {
+    card.querySelector('.day-body').style.display = 'none';
+  }
 }
 
-function buildMap(){
-  const phase=days[cur].phase;const col=phaseColors[phase];
-  const pp=pts.filter(p=>p.phase===phase);
-  document.getElementById('route').setAttribute('points',pp.map(p=>`${p.x},${p.y}`).join(' '));
-  document.getElementById('route').setAttribute('stroke',col);
-  document.getElementById('markers').innerHTML=pts.map(p=>{
-    const on=p.phase===phase;
-    const c=on?(p.isNew&&on?'#3B6D11':col):'#9E9C96';
-    const r=on?7:4.5;
-    const lx=p.x>390?p.x-9:p.x+11;
-    const anchor=p.x>390?'end':'start';
-    return`<g>
-      <circle cx="${p.x}" cy="${p.y}" r="${r+5}" fill="${c}" opacity="${on?0.18:0}" class="${on?'pulse':''}"/>
-      <circle cx="${p.x}" cy="${p.y}" r="${r}" fill="${c}" stroke="white" stroke-width="1.5"/>
-      <text x="${lx}" y="${p.y+4}" font-size="9.5" font-family="DM Sans,sans-serif" font-weight="${on?500:400}" fill="${on?c:'#9E9C96'}" text-anchor="${anchor}">${p.name}</text>
-    </g>`;
-  }).join('');
-}
-
-function go(i){cur=i;buildTabs();buildDetail();buildMap();}
-go(0);
+// Init: close all day cards except open ones
+document.querySelectorAll('.day-card:not(.open) .day-body').forEach(b => b.style.display = 'none');
 </script>
+
+
+</body></html>
